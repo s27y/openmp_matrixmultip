@@ -1,0 +1,10 @@
+set datafile separator ","
+set title "Execution time of OpenMP and serial matrix multiple and norm(16 thread)"
+set xlabel "Matrix size"
+#set legend position
+set key left box
+
+
+plot "out_omp_static.csv" using 1:2 title 'OpenMP Static' with lines, "out_omp_dynamic.csv" using 1:2 title 'OpenMP Dynamic' with lines, "out_serial.csv" using 1:2 title 'Serial' with lines,
+#it will close immediately without pause
+pause -1

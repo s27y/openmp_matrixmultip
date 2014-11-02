@@ -1,0 +1,12 @@
+set datafile separator ","
+set title "The speedup of the OpenMP(16 thread) over the serial"
+set xlabel "Matrix size"
+set ylabel "Speed up"
+#set legend position
+set key left box
+
+
+
+plot "out_speedup.csv" using 1:($2/$3) title 'speedup' with lines
+#it will close immediately without pause
+pause -1
